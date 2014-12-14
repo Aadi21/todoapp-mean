@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo App</title>
+</head>
+<body ng-app="todoApp">
+  <div  ng-controller="todosController">
+  <h1>Create ToDos</h1>
+
+    <ul style="list-style: none">
+      <li style="border: 1px solid #EEE">
+        <form id="todoForm" ng-submit="createTodo()">
+          <input type="checkbox" name="done" ng-model="done">
+          <input type="text" name="title" ng-model="title">
+          <input type="submit" name="Create" value="Create">
+        </form>
+      </li>
+      <li ng-repeat="todo in todos" style="border: 1px solid #EEE">
+        <h3><input type="checkbox" ng-checked="{{todo.done}}"> {{todo.title}}</h3>
+          <span ng-click="editTodo(todo._id)">Edit</span> |
+          <span ng-click="deleteTodo(todo._id)">Delete</span>
+     </li>
+    </ul>
+
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+
+
+  <script src="/js/app.js" charset="utf-8"></script>
+  <script src="/js/controller.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "TodoApp",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.10.6",
+    "body-parser": "^1.10.0",
+    "mongoose": "^3.8.20"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "A sample Todo App using MEAN stack",
+  "main": "server.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "keywords": [
+    "MEAN",
+    "sample"
+  ],
+  "author": "Aditya",
+  "license": "ISC"
+}
