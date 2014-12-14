@@ -20,6 +20,7 @@ app.post('/api/todos', todoController.create);
 app.get('/api/todos', todoController.list);
 app.get('/api/todos/:id', todoController.getOne);
 app.delete('/api/todos/:id', todoController.deleteOne);
+app.put('/api/todos/:id', todoController.update);
 
 
 app.listen(3000, function () {
